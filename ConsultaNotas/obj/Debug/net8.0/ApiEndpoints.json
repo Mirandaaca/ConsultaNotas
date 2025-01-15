@@ -1,0 +1,443 @@
+[
+  {
+    "ContainingType": "ConsultaNotas.Controllers.AvancesMateriaController",
+    "Method": "CargarSemestresDeEstudiante",
+    "RelativePath": "api/AvancesMateria/CargarSemestresDeEstudiante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ConsultaNotas.Entities.AvanceMateriaSemestre, ConsultaNotas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.AvancesMateriaController",
+    "Method": "ObtenerAvanceMaterias",
+    "RelativePath": "api/AvancesMateria/ObtenerAvanceMaterias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ConsultaNotas.DTOs.AvanceMateria.AvanceMateriaDTO, ConsultaNotas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.AvancesMateriaController",
+    "Method": "ObtenerNotasSemestre",
+    "RelativePath": "api/AvancesMateria/ObtenerNotasSemestre",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nsa",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ConsultaNotas.Entities.AvanceMateria, ConsultaNotas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.DocumentacionController",
+    "Method": "ObtenerDocumentosDeEstudiante",
+    "RelativePath": "api/Documentacion/ObtenerDocumentosDeEstudiante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConsultaNotas.Entities.Documentos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasEstudianteController",
+    "Method": "LogIn",
+    "RelativePath": "api/NotasEstudiante/LogIn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ConsultaNotas.DTOs.Auth.LogInEstudianteRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConsultaNotas.DTOs.Auth.LogInEstudianteResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasEstudianteController",
+    "Method": "ObtenerInformacionBasicaDeEstudiante",
+    "RelativePath": "api/NotasEstudiante/ObtenerInformacionBasicaDeEstudiante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConsultaNotas.Entities.NotasEstudiante",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasPeriodoController",
+    "Method": "ObtenerCreditosVencidos",
+    "RelativePath": "api/NotasPeriodo/ObtenerCreditosVencidos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasPeriodoController",
+    "Method": "ObtenerHistoricoDeUnEstudiante",
+    "RelativePath": "api/NotasPeriodo/ObtenerHistoricoDeUnEstudiante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ConsultaNotas.DTOs.Historico.HistoricoDTO, ConsultaNotas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasPeriodoController",
+    "Method": "ObtenerMateriasVencidas",
+    "RelativePath": "api/NotasPeriodo/ObtenerMateriasVencidas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasPeriodoController",
+    "Method": "ObtenerNotasDelSemestreActual",
+    "RelativePath": "api/NotasPeriodo/ObtenerNotasDelSemestreActual",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConsultaNotas.DTOs.Semestre.NotasYPeriodoDeUnSemestreDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasPeriodoController",
+    "Method": "ObtenerPeriodosDeEstudiante",
+    "RelativePath": "api/NotasPeriodo/ObtenerPeriodosDeEstudiante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ConsultaNotas.Entities.NotasPeriodo, ConsultaNotas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasPeriodoController",
+    "Method": "ObtenerPromedioPonderadoAcumulado",
+    "RelativePath": "api/NotasPeriodo/ObtenerPromedioPonderadoAcumulado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasPeriodoController",
+    "Method": "ObtenerPromedioSemestral",
+    "RelativePath": "api/NotasPeriodo/ObtenerPromedioSemestral",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ano",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "semestre",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasPinController",
+    "Method": "ObtenerPinDeEstudiante",
+    "RelativePath": "api/NotasPin/ObtenerPinDeEstudiante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConsultaNotas.Entities.NotasPin",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasRegimenController",
+    "Method": "ObtenerInformacionSemestre",
+    "RelativePath": "api/NotasRegimen/ObtenerInformacionSemestre",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regimen",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConsultaNotas.Entities.NotasRegimen",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConsultaNotas.Controllers.NotasSemestreController",
+    "Method": "ObtenerNotasDeUnSemestre",
+    "RelativePath": "api/NotasSemestre/ObtenerNotasDeUnSemestre",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registro",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ano",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "semestre",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConsultaNotas.DTOs.Semestre.NotasYPeriodoDeUnSemestreDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

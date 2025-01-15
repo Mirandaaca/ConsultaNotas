@@ -1,0 +1,6 @@
+@ConsultaNotas_HostAddress = http://localhost:5044
+
+GET {{ConsultaNotas_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

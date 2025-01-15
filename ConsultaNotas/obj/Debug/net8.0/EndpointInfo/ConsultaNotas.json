@@ -1,0 +1,1135 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ConsultaNotas",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/AvancesMateria/CargarSemestresDeEstudiante": {
+      "get": {
+        "tags": [
+          "AvancesMateria"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvanceMateriaSemestre"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvanceMateriaSemestre"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvanceMateriaSemestre"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/AvancesMateria/ObtenerNotasSemestre": {
+      "get": {
+        "tags": [
+          "AvancesMateria"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "nsa",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvanceMateria"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvanceMateria"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvanceMateria"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/AvancesMateria/ObtenerAvanceMaterias": {
+      "get": {
+        "tags": [
+          "AvancesMateria"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvanceMateriaDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvanceMateriaDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AvanceMateriaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Documentacion/ObtenerDocumentosDeEstudiante": {
+      "get": {
+        "tags": [
+          "Documentacion"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Documentos"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Documentos"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Documentos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasEstudiante/ObtenerInformacionBasicaDeEstudiante": {
+      "get": {
+        "tags": [
+          "NotasEstudiante"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasEstudiante"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasEstudiante"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasEstudiante"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasEstudiante/LogIn": {
+      "post": {
+        "tags": [
+          "NotasEstudiante"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogInEstudianteRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogInEstudianteRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogInEstudianteRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogInEstudianteResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogInEstudianteResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogInEstudianteResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasPeriodo/ObtenerPeriodosDeEstudiante": {
+      "get": {
+        "tags": [
+          "NotasPeriodo"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotasPeriodo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotasPeriodo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NotasPeriodo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasPeriodo/ObtenerHistoricoDeUnEstudiante": {
+      "get": {
+        "tags": [
+          "NotasPeriodo"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HistoricoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasPeriodo/ObtenerNotasDelSemestreActual": {
+      "get": {
+        "tags": [
+          "NotasPeriodo"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasYPeriodoDeUnSemestreDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasYPeriodoDeUnSemestreDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasYPeriodoDeUnSemestreDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasPeriodo/ObtenerPromedioSemestral": {
+      "get": {
+        "tags": [
+          "NotasPeriodo"
+        ],
+        "parameters": [
+          {
+            "name": "ano",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "semestre",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasPeriodo/ObtenerPromedioPonderadoAcumulado": {
+      "get": {
+        "tags": [
+          "NotasPeriodo"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasPeriodo/ObtenerCreditosVencidos": {
+      "get": {
+        "tags": [
+          "NotasPeriodo"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasPeriodo/ObtenerMateriasVencidas": {
+      "get": {
+        "tags": [
+          "NotasPeriodo"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasPin/ObtenerPinDeEstudiante": {
+      "get": {
+        "tags": [
+          "NotasPin"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasPin"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasPin"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasPin"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasRegimen/ObtenerInformacionSemestre": {
+      "get": {
+        "tags": [
+          "NotasRegimen"
+        ],
+        "parameters": [
+          {
+            "name": "regimen",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasRegimen"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasRegimen"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasRegimen"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NotasSemestre/ObtenerNotasDeUnSemestre": {
+      "get": {
+        "tags": [
+          "NotasSemestre"
+        ],
+        "parameters": [
+          {
+            "name": "registro",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "ano",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "semestre",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasYPeriodoDeUnSemestreDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasYPeriodoDeUnSemestreDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotasYPeriodoDeUnSemestreDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AvanceMateria": {
+        "type": "object",
+        "properties": {
+          "semestre": {
+            "type": "string",
+            "nullable": true
+          },
+          "sigla": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_materia": {
+            "type": "string",
+            "nullable": true
+          },
+          "hp": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ht": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nota": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sem": {
+            "type": "string",
+            "nullable": true
+          },
+          "ano": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AvanceMateriaDTO": {
+        "type": "object",
+        "properties": {
+          "semestre": {
+            "type": "string",
+            "nullable": true
+          },
+          "semestreInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SemestreAvanceMateriaDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AvanceMateriaSemestre": {
+        "type": "object",
+        "properties": {
+          "semestre": {
+            "type": "string",
+            "nullable": true
+          },
+          "nsa": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Documentos": {
+        "type": "object",
+        "properties": {
+          "ci": {
+            "type": "string",
+            "nullable": true
+          },
+          "tb": {
+            "type": "string",
+            "nullable": true
+          },
+          "cn": {
+            "type": "string",
+            "nullable": true
+          },
+          "foto": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstudianteLogInResponseDataDTO": {
+        "type": "object",
+        "properties": {
+          "registro": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semestre": {
+            "type": "string",
+            "nullable": true
+          },
+          "ano": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "carrera": {
+            "type": "string",
+            "nullable": true
+          },
+          "plan": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistoricoDTO": {
+        "type": "object",
+        "properties": {
+          "periodo": {
+            "type": "string",
+            "nullable": true
+          },
+          "semestreInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SemestreHistoricoDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogInEstudianteRequestDTO": {
+        "type": "object",
+        "properties": {
+          "registro": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pin": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogInEstudianteResponseDTO": {
+        "type": "object",
+        "properties": {
+          "informacionEstudiante": {
+            "$ref": "#/components/schemas/EstudianteLogInResponseDataDTO"
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          },
+          "jwtToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotaSemestreDTO": {
+        "type": "object",
+        "properties": {
+          "sigla": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreMateria": {
+            "type": "string",
+            "nullable": true
+          },
+          "cr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pp": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sp": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ec": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ie": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tp": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nf": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotasEstudiante": {
+        "type": "object",
+        "properties": {
+          "registro": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semestre": {
+            "type": "string",
+            "nullable": true
+          },
+          "ano": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "carrera": {
+            "type": "string",
+            "nullable": true
+          },
+          "plan": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotasPeriodo": {
+        "type": "object",
+        "properties": {
+          "cod_reg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "periodo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ano": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sem": {
+            "type": "string",
+            "nullable": true
+          },
+          "reg": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotasPin": {
+        "type": "object",
+        "properties": {
+          "registro": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pin": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotasRegimen": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ano": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "semestre": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotasYPeriodoDeUnSemestreDTO": {
+        "type": "object",
+        "properties": {
+          "periodo": {
+            "type": "string",
+            "nullable": true
+          },
+          "notas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotaSemestreDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SemestreAvanceMateriaDTO": {
+        "type": "object",
+        "properties": {
+          "sigla": {
+            "type": "string",
+            "nullable": true
+          },
+          "materia": {
+            "type": "string",
+            "nullable": true
+          },
+          "horasPracticas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "horasTeoricas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "creditos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nota": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "periodo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SemestreHistoricoDTO": {
+        "type": "object",
+        "properties": {
+          "sigla": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreMateria": {
+            "type": "string",
+            "nullable": true
+          },
+          "creditos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notaFinal": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
