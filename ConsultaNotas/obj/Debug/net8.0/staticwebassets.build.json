@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "dNqCLomh7cA3wTCbUew4XhtYqoXWeJPUhQfepPlFq7U=",
+  "Hash": "CPPqiTDxJXrzYkS7WOGXgcV5Dr8lpp2rb1me1ppALFg=",
   "Source": "ConsultaNotas",
   "BasePath": "_content/ConsultaNotas",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }
